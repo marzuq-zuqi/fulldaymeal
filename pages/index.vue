@@ -11,30 +11,23 @@
                         </button>
                         <p class="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">Would you like to pick up your meal from one of our stores?</p>
                     </div> 
-                    <!-- <div :v-for="meal in meals" :key="meals.idMeal" >
+                    <div v-for="meal in meals" >
                          <MealCard :meal="meal"/>
-                       {{ meal.idMeal}}
-                    </div> -->
-
+                    </div>
                 </div>
-    </section>
-    <section>
-       
-    </section>
+            </section>
         </body>
     </div>
-  
 </template>
 
-<script setup>
+<script setup >
     const uri = 'https://www.themealdb.com/api/json/v1/1/search.php?f=a'
     const {data: response} = await useFetch(uri)
-
+    
     const meals = response._rawValue.meals
-
     
 </script>
-
+<!-- 
 <style lang="scss" scoped>
 
-</style>
+</style> -->
