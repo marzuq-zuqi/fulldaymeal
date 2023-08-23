@@ -21,13 +21,8 @@
 </template>
 
 <script setup >
-    const uri = 'https://www.themealdb.com/api/json/v1/1/search.php?f=a'
+    const uri = 'http://localhost:3001/meals'
     const {data: response} = await useFetch(uri)
-    
-    const meals = response._rawValue.meals
+    const meals = response._rawValue
     
 </script>
-<!-- 
-<style lang="scss" scoped>
-
-</style> -->
